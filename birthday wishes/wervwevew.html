@@ -1,0 +1,290 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Birthday Celebration</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{height:100%}
+body{
+  font-family:'Inter',sans-serif;
+  background:#0a0a0a;
+  color:#fff;
+  overflow-x:hidden
+}
+.main-wrapper{
+  min-height:100%;
+  background:radial-gradient(ellipse at top,#1a0f2e 0%,#0a0a0a 50%)
+}
+.content{
+  max-width:1200px;
+  margin:auto;
+  padding:60px 30px;
+  position:relative;
+  z-index:2
+}
+.intro{text-align:center;margin-bottom:100px}
+.label{
+  font-size:14px;
+  letter-spacing:3px;
+  text-transform:uppercase;
+  color:#a78bfa;
+  margin-bottom:20px
+}
+.name{
+  font-family:'Playfair Display',serif;
+  font-size:120px;
+  font-weight:900;
+  background:linear-gradient(135deg,#fbbf24,#f472b6,#a78bfa);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent
+}
+.age-badge{
+  display:inline-flex;
+  gap:12px;
+  padding:16px 40px;
+  border-radius:50px;
+  background:rgba(167,139,250,.15);
+  border:2px solid rgba(167,139,250,.3);
+  font-size:28px;
+  color:#fbbf24;
+  margin-top:20px
+}
+.card{
+  background:linear-gradient(135deg,rgba(251,191,36,.08),rgba(244,114,182,.08),rgba(167,139,250,.08));
+  border-radius:32px;
+  padding:60px;
+  margin-bottom:40px;
+  border:1px solid rgba(255,255,255,.1)
+}
+.card-icon{font-size:64px;margin-bottom:24px}
+.card-title{
+  font-family:'Playfair Display',serif;
+  font-size:42px;
+  background:linear-gradient(135deg,#fbbf24,#f472b6);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+  margin-bottom:20px
+}
+.card-text{
+  font-size:20px;
+  line-height:1.8;
+  color:#d1d5db
+}
+
+/* CAKE EMBED */
+.cake-wrapper{
+  margin-top:30px;
+  border-radius:24px;
+  overflow:hidden;
+  box-shadow:0 20px 60px rgba(0,0,0,.4)
+}
+.cake-wrapper iframe{
+  width:100%;
+  height:500px;
+  border:none
+}
+.cake-credit{
+  font-size:13px;
+  margin-top:8px;
+  color:#9ca3af;
+  text-align:center
+}
+.cake-credit a{
+  color:#a78bfa;
+  text-decoration:none;
+  font-weight:600
+}
+
+/* PHOTO GALLERY UPDATED */
+.photo-gallery{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:30px;
+  margin-top:30px
+}
+.photo-item {
+  aspect-ratio:4/3;
+  border-radius:20px;
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,0.1);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+.photo-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+.photo-item img:hover {
+  transform: scale(1.05);
+}
+
+/* VOICE */
+.voice-memo-grid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:30px;
+  margin-top:30px
+}
+.voice-card{
+  background:linear-gradient(135deg,rgba(167,139,250,.15),rgba(244,114,182,.15));
+  border-radius:20px;
+  padding:30px;
+  border:1px solid rgba(255,255,255,.2)
+}
+.voice-title{
+  font-size:18px;
+  margin-bottom:10px;
+  color:#f472b6
+}
+audio{width:100%}
+
+.wish-card{
+  background:linear-gradient(135deg,#fbbf24,#f472b6,#a78bfa);
+  padding:80px 60px;
+  text-align:center;
+  margin-top:80px
+}
+.wish-title{
+  font-family:'Playfair Display',serif;
+  font-size:56px;
+  margin-bottom:30px
+}
+.wish-message{
+  font-size:24px;
+  line-height:1.8
+}
+
+@media(max-width:768px){
+  .name{font-size:64px}
+  .voice-memo-grid,
+  .photo-gallery{grid-template-columns:1fr}
+  .cake-wrapper iframe{height:350px}
+}
+</style>
+</head>
+
+<body>
+<div class="main-wrapper">
+<div class="content">
+
+<div class="intro">
+  <div class="label">🎉 IT'S YOUR SPECIAL DAY 🎉</div>
+  <h1 class="name">Riddhika</h1>
+  <div class="age-badge">✨ 15 Years of slayying and just looking like a WoW</div>
+</div>
+
+<div class="card">
+  <div class="card-icon">🎂</div>
+  <h2 class="card-title">Your Virtual Birthday Cake</h2>
+  <p class="card-text">Make a wish, (hamara budget kam pad gya tha)✨</p>
+
+  <div class="cake-wrapper">
+    <iframe
+      title="birthday cake"
+      allow="autoplay; fullscreen; xr-spatial-tracking"
+      allowfullscreen
+      src="https://sketchfab.com/models/439919be2dcf4e3589a62fa1c8a379ff/embed">
+    </iframe>
+  </div>
+
+  <div class="cake-credit">
+    <a href="https://sketchfab.com/3d-models/birthday-cake-439919be2dcf4e3589a62fa1c8a379ff" target="_blank">birthday cake</a>
+    by <a href="https://sketchfab.com/bbluesidee" target="_blank">bblueside</a> on
+    <a href="https://sketchfab.com" target="_blank">Sketchfab</a>
+  </div>
+</div>
+
+<div class="card">
+  <div class="card-icon">📸</div>
+  <h2 class="card-title">Aapki sundar shakal ka pradarshan (some photos i liked)</h2>
+  <div class="photo-gallery">
+    <div class="photo-item">
+      <img src="image.png" alt="Riddhika with dog">
+    </div>
+    <div class="photo-item">
+      <img src="1000412551_77b7014d92ec97471ec7fb90fb42e033-16_1_2026, 4_30_27 pm.jpg" alt="Party moment">
+    </div>
+    <div class="photo-item">
+      <img src="1000412557_86943b9495983201200faa8cff2f4f15-16_1_2026, 4_34_16 pm.jpg" alt="Friends together">
+    </div>
+    <div class="photo-item">
+      <img src="Screenshot 2026-01-16 180250.png" alt="Group selfie">
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <div class="card-icon">🎙️</div>
+  <h2 class="card-title">Birthday Messages</h2>
+
+  <div class="voice-memo-grid">
+
+    <div class="voice-card">
+      <div class="voice-title">From Abhigyan</div>
+      <audio controls>
+        <source src="Birthday%20msg.mp3" type="audio/mpeg">
+      </audio>
+    </div>
+
+    <div class="voice-card">
+      <div class="voice-title">From Niharika</div>
+      <audio controls>
+        <source src="niharika.ogg" type="audio/ogg">
+      </audio>
+    </div>
+
+    <div class="voice-card">
+      <div class="voice-title">From Vijeta</div>
+      <audio controls>
+        <source src="vijeta.ogg" type="audio/ogg">
+      </audio>
+    </div>
+
+    <div class="voice-card">
+      <div class="voice-title">From Shreshta</div>
+      <audio controls>
+        <source src="WhatsApp%20Ptt%202026-01-08%20at%2014.05.09.ogg" type="audio/ogg">
+      </audio>
+    </div>
+
+    <div class="voice-card">
+      <div class="voice-title">From Arshia</div>
+      <audio controls>
+        <source src="WhatsApp%20Ptt%202026-01-15%20at%2021.40.06.ogg" type="audio/ogg">
+      </audio>
+    </div>
+
+    <div class="voice-card">
+      <div class="voice-title">From Bhoomi</div>
+      <audio controls>
+        <source src="WhatsApp%20Ptt%202026-01-16%20at%2017.25.34%20%282%29.ogg" type="audio/ogg">
+      </audio>
+    </div>
+
+    <div class="voice-card">
+      <div class="voice-title">From Suchi</div>
+      <audio controls>
+        <source src="WhatsApp%20Ptt%202026-01-16%20at%2017.27.22%20%281%29.ogg" type="audio/ogg">
+      </audio>
+    </div>
+
+  </div>
+</div>
+
+<div class="card wish-card">
+  <h2 class="wish-title">A WORD FROM THE EDITOR OF THE DAILY DELULU</h2>
+  <p class="wish-message">
+   A very happpy birthday to you, our lovely choti behen. From jhagde to behencode, hamne na jaane kya kya badmoshi ki. Thank you for being there and being such a good friend, i hope tere baccho waali harkate ham next year bhi dekh paaye somehow. And dont forget that cats are better than dogs and ami tomar theke bhalo bangla jaani <3 Happy Birthday! 🎈✨
+  </p>
+</div>
+
+</div>
+</div>
+</body>
+</html>
